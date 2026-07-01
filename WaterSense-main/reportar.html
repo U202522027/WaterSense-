@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reportar Problema - WaterSense</title>
-    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
 
     <header class="encabezado">
         <div class="logo-contenedor">
-            <img src="../imagenes/Watersense.jpeg" alt="Logo WaterSense" class="logo-imagen">
+            <img src="imagenes/Watersense.jpeg" alt="Logo WaterSense" class="logo-imagen">
             <h1 class="logo-texto">WaterSense</h1>
         </div>
         
         <nav class="navegacion">
-            <img src="../imagenes/Notificacion.jpeg" alt="Notificaciones" class="icono-campana-img">
+            <img src="imagenes/Notificacion.jpeg" alt="Notificaciones" class="icono-campana-img">
             <a href="index.html">Inicio</a>
             <a href="guias.html">Guias</a>
             <a href="#" class="activo">Reportar Problema</a>
@@ -85,7 +85,7 @@
 
         <!-- Panel derecho: mapa -->
         <section class="panel-derecho">
-            <img src="../imagenes/Mapa.jpeg" alt="Mapa hídrico" class="imagen-mapa">
+            <img src="imagenes/Mapa.jpeg" alt="Mapa hídrico" class="imagen-mapa">
         </section>
 
     </main>
@@ -94,34 +94,6 @@
         <p>©WaterSense 2026. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="../javascript/app.js"></script>
-    <script>
-        function mostrarNombreArchivo(input) {
-            const nombre = input.files[0] ? input.files[0].name : '';
-            document.getElementById('nombre-archivo').textContent = nombre;
-        }
-
-        function enviarReporte() {
-            const problema = document.getElementById('problema').value.trim();
-            const ubicacion = document.getElementById('ubicacion').value.trim();
-            const descripcion = document.getElementById('descripcion').value.trim();
-
-            if (!problema || !ubicacion || !descripcion) {
-                alert('Por favor completa todos los campos antes de enviar.');
-                return;
-            }
-
-            const mensaje = document.getElementById('mensaje-exito');
-            mensaje.style.display = 'block';
-
-            // Limpiar formulario
-            document.getElementById('problema').value = '';
-            document.getElementById('ubicacion').value = '';
-            document.getElementById('descripcion').value = '';
-            document.getElementById('nombre-archivo').textContent = '';
-
-            setTimeout(() => { mensaje.style.display = 'none'; }, 4000);
-        }
-    </script>
+    <script src="javascript/app.js"></script>
 </body>
 </html>
