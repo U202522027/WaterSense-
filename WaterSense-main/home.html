@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaterSense</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="logo-contenedor">
+            <img src="../imagenes/Watersense.jpeg" alt="Logo WaterSense" class="logo-imagen">
+            <h1 class="logo-texto">WaterSense</h1>
+        </div>
+        
+        <nav class="navegacion">
+            <img src="../imagenes/Notificacion.jpeg" alt="Notificaciones" class="icono-campana-img">
+            <a href="index.html">Inicio</a>
+            <a href="guias.html">Guías</a>
+            <a href="#" class="activo">Datos Históricos</a>
+            <a href="#">Mapa hídrico</a>
+            <a href="#" class="btn-login">Iniciar Sesion</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        
+        <section class="panel-izquierdo">
+            <h2 class="titulo-panel">Datos Históricos</h2>
+            <hr class="linea-separadora">
+            
+            <div class="seccion-filtros">
+                <p>Filtrar por</p>
+                <div class="botones-filtro">
+                    <button class="btn-filtro">Ubicación</button>
+                    <button class="btn-filtro">Fecha Inicio</button>
+                    <button class="btn-filtro">Fecha Fin</button>
+                </div>
+            </div>
+            <hr class="linea-separadora">
+
+            <div class="lista-tarjetas">
+                <div class="tarjeta">
+                    <div class="info-tarjeta">
+                        <h3 class="titulo-tarjeta">Mal olor en el agua...</h3>
+                        <p class="desc-tarjeta">Usuarios indicaron olor extraño en el agua, aunque el suministro continua disponible...</p>
+                        <div class="detalles-tarjeta">
+                            <span class="ubicacion-con-icono">
+                                <span class="icono-gps">📍</span> 
+                                Lima, Comas Urb. San Felipe 420
+                            </span>
+                            <span class="recuadro-fecha">12/05/2024</span>
+                        </div>
+                    </div>
+                    <div class="etiqueta estado-bajo">Bajo</div>
+                </div>
+
+                <div class="tarjeta">
+                    <div class="info-tarjeta">
+                        <h3 class="titulo-tarjeta">Corte de agua...</h3>
+                        <p class="desc-tarjeta">Se registró interrupción del servicio por más de 8 horas en la zona reportada...</p>
+                        <div class="detalles-tarjeta">
+                            <span class="ubicacion-con-icono">
+                                <span class="icono-gps">📍</span> 
+                                Lima, Ate, Av. Nicolás Ayllón
+                            </span>
+                            <span class="recuadro-fecha">21/10/2024</span>
+                        </div>
+                    </div>
+                    <div class="etiqueta estado-medio">Medio Alto</div>
+                </div>
+
+                <div class="tarjeta">
+                    <div class="info-tarjeta">
+                        <h3 class="titulo-tarjeta">Agua turbia reportada...</h3>
+                        <p class="desc-tarjeta">Vecinos reportaron agua con color marrón y presencia de sedimentos durante la mañana...</p>
+                        <div class="detalles-tarjeta">
+                            <span class="ubicacion-con-icono">
+                                <span class="icono-gps">📍</span> 
+                                Lima, Ate, Av. Nicolás Ayllón
+                            </span>
+                            <span class="recuadro-fecha">19/12/2025</span>
+                        </div>
+                    </div>
+                    <div class="etiqueta estado-alto">Alto</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel-derecho">
+            <img src="../imagenes/Mapa.jpeg" alt="Mapa hídrico" class="imagen-mapa">
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>©WaterSense 2026. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../javascript/app.js"></script>
+</body>
+</html>

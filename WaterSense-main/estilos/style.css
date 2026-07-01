@@ -1,0 +1,755 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* ------------------- ENCABEZADO ------------------- */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-imagen {
+    height: 50px; 
+    width: auto;
+}
+
+.logo-texto {
+    color: #116a5b;
+    font-size: 28px;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* NUEVA CLASE: Estilo para la imagen de la campanita */
+.icono-campana-img {
+    height: 32px; /* Puedes subir o bajar este número si la quieres más grande/pequeña */
+    width: auto;
+    cursor: pointer;
+    border-radius: 50%; /* Asegura que mantenga la forma circular sin bordes blancos raros */
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #0068a8;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.navegacion a.activo {
+    color: #116a5b;
+}
+
+/* ================= CONTENEDOR PRINCIPAL ================= */
+.contenedor-principal {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 20px 40px;
+    background-color: #ffffff;
+}
+
+/* ------------------- PANEL IZQUIERDO ---------------- */
+.panel-izquierdo {
+    flex: 1;
+    border: 2px solid #5d5d5d;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.titulo-panel {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.linea-separadora {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.seccion-filtros p {
+    color: #004080;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.botones-filtro {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-filtro {
+    padding: 8px 15px;
+    border: 1px solid #004080;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #004080;
+    cursor: pointer;
+    font-size: 14px;
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+.btn-filtro:hover, .btn-filtro.activo {
+    background-color: #b3e5fc;
+}
+
+/* --------------------TARJETAS------------------- */
+.lista-tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #7d7d7d;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.info-tarjeta {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.titulo-tarjeta {
+    background-color: #4da6ff;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.desc-tarjeta {
+    background-color: #e6f2ff;
+    color: #555;
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.detalles-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #e6f2ff;
+    padding: 5px;
+    font-size: 11px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.ubicacion-con-icono {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icono-gps {
+    font-size: 14px;
+}
+
+.recuadro-fecha {
+    display: inline-block;
+    background-color: #ffffff; 
+    border: 1px solid #99c2ff; 
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-weight: bold;
+    color: #004080;
+}
+
+/* Etiquetas de estado */
+.etiqueta {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.estado-bajo {
+    background-color: #d4f1dd;
+    color: #2e7d32;
+}
+
+.estado-medio {
+    background-color: #ffe0b2;
+    color: #ef6c00;
+}
+
+.estado-alto {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+/* --------------- PANEL DERECHO --------------- */
+.panel-derecho {
+    flex: 1;
+}
+
+.imagen-mapa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* --------------------PIE DE PÁGINA --------------- */
+.pie-pagina {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* ================= PÁGINA DE GUÍAS ================= */
+
+/* Contenedor central amplio para las guías */
+.panel-guias-contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    border: 2px solid #5d5d5d;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.titulo-principal-guias {
+    text-align: center;
+    color: #004080;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Flexbox para alinear las 3 tarjetas una al lado de la otra */
+.contenedor-tarjetas-guias {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px; 
+}
+
+/* Estructura de cada tarjeta individual */
+.tarjeta-guia {
+    flex: 1;
+    position: relative; 
+    border: 2px solid #d0e1f9; 
+    border-radius: 8px;
+    padding: 40px 20px 20px 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+/* Título azul que sobresale en la parte superior */
+.titulo-tarjeta-guia {
+    position: absolute;
+    top: -18px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #003366;
+    color: white;
+    width: 85%;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+/* Texto gris de la descripción */
+.texto-guia {
+    color: #888888;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilo para las imágenes que vas a colocar */
+.imagen-guia {
+    width: 100%;
+    height: 160px; /* Altura uniforme para que todas las tarjetas midan igual */
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-radius: 4px;
+}
+/* ================= PANTALLA PRINCIPAL (HOME) ================= */
+
+/* Hero: buscador + mapa */
+.hero-section {
+    display: flex;
+    min-height: 320px;
+    background-color: #003d7a;
+}
+
+.hero-panel-busqueda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 40px;
+    width: 300px;
+    flex-shrink: 0;
+    background-color: #003d7a;
+}
+
+.input-busqueda {
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+    outline: none;
+    width: 100%;
+}
+
+.label-alerta {
+    color: #cce4ff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.botones-alerta {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-alerta {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-bajo {
+    background-color: #c8f0d0;
+    color: #2e7d32;
+    border-color: #81c784;
+}
+
+.btn-medio {
+    background-color: #ffe0b2;
+    color: #ef6c00;
+    border-color: #ffb74d;
+}
+
+.btn-alto {
+    background-color: #ffcdd2;
+    color: #c62828;
+    border-color: #ef9a9a;
+}
+
+.btn-alerta.activo {
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+}
+
+.btn-buscar {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 2px solid #cce4ff;
+    background-color: transparent;
+    color: #cce4ff;
+    font-size: 15px;
+    cursor: pointer;
+    width: 120px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-buscar:hover {
+    background-color: #cce4ff;
+    color: #003d7a;
+}
+
+.hero-mapa {
+    flex: 1;
+    overflow: hidden;
+}
+
+.imagen-mapa-hero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Sección de soluciones */
+.seccion-soluciones {
+    padding: 50px 40px;
+    background-color: #f0f6ff;
+    text-align: center;
+}
+
+.titulo-soluciones {
+    color: #003d7a;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.subtitulo-soluciones {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.contenedor-cards-soluciones {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-solucion {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px 20px;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: box-shadow 0.2s;
+}
+
+.card-solucion:hover {
+    box-shadow: 0 4px 16px rgba(0,104,168,0.15);
+}
+
+.titulo-card-solucion {
+    color: #0068a8;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.icono-solucion {
+    margin: 0 auto 16px auto;
+}
+
+.desc-card-solucion {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ================= PÁGINA DE REPORTE ================= */
+
+.formulario-reporte {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label-campo {
+    color: #004080;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-campo {
+    padding: 10px 14px;
+    border: 1px solid #b3d1f5;
+    border-radius: 6px;
+    background-color: #ddeeff;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-campo:focus {
+    border-color: #0068a8;
+    background-color: #eaf3ff;
+}
+
+.textarea-campo {
+    padding: 10px 14px;
+    border: 1px solid #b3d1f5;
+    border-radius: 6px;
+    background-color: #ddeeff;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.2s;
+}
+
+.textarea-campo:focus {
+    border-color: #0068a8;
+    background-color: #eaf3ff;
+}
+
+.botones-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.btn-adjuntar {
+    padding: 12px;
+    background-color: #003d7a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-adjuntar:hover {
+    background-color: #002a57;
+}
+
+.nombre-archivo {
+    font-size: 12px;
+    color: #555;
+    margin-left: 4px;
+}
+
+.btn-enviar {
+    padding: 12px;
+    background-color: #003d7a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #002a57;
+}
+
+.mensaje-exito {
+    background-color: #d4f1dd;
+    color: #2e7d32;
+    border: 1px solid #81c784;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.home-nav a {
+            text-decoration: none;
+            color: #0068a8;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* ===== HERO ===== */
+        .home-hero {
+            display: flex;
+            height: 370px;
+            background-color: #1a3d7c;
+        }
+
+        .home-hero-panel {
+            width: 500px;
+            flex-shrink: 0;
+            background-color: #1a3d7c;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 48px;
+            gap: 0;
+        }
+
+        .home-input-zona {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            padding: 13px 16px;
+            font-size: 15px;
+            color: #555;
+            width: 100%;
+            margin-bottom: 22px;
+            outline: none;
+        }
+
+        .home-label-alerta {
+            color: #d0e8ff;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .home-botones-alerta {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .home-btn-alerta {
+            flex: 1;
+            padding: 12px 6px;
+            border-radius: 20px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .home-btn-bajo  { background-color: #c8f0d4; color: #2e7d32; }
+        .home-btn-medio { background-color: #ffe0a0; color: #b45c00; }
+        .home-btn-alto  { background-color: #ffb3b3; color: #c62828; }
+
+        .home-btn-buscar {
+            width: 120px;
+            padding: 9px 0;
+            border-radius: 6px;
+            border: 2px solid #c8ddff;
+            background-color: transparent;
+            color: #c8ddff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .home-btn-buscar:hover {
+            background-color: #c8ddff;
+            color: #1a3d7c;
+        }
+
+        .home-hero-mapa {
+            flex: 1;
+            overflow: hidden;
+        }
+        .home-hero-mapa img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ===== SECCIÓN SOLUCIONES ===== */
+        .home-soluciones {
+            background-color: #eef4fb;
+            padding: 48px 60px 60px 60px;
+            text-align: center;
+        }
+
+        .home-soluciones-titulo {
+            color: #0d3b7a;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .home-soluciones-sub {
+            color: #444;
+            font-size: 14px;
+            margin-bottom: 42px;
+        }
+
+        /* Grid de 4 columnas: título encima, card abajo */
+        .home-cards-grid {
+            display: flex;
+            gap: 22px;
+            justify-content: center;
+        }
+
+        .home-card-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+            max-width: 230px;
+        }
+
+        .home-card-titulo {
+            color: #0068a8;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .home-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 28px 20px 24px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            flex: 1;
+        }
+
+        .home-card-icono {
+            width: 90px;
+            height: 90px;
+        }
+
+        .home-card-desc {
+            color: #444;
+            font-size: 13px;
+            line-height: 1.65;
+            text-align: left;
+            width: 100%;
+        }
+
+        /* Footer con "Footer" centrado como en el diseño */
+        .home-footer {
+            background-color: #0d2f6e;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+        }
+        .home-footer-copy { font-size: 13px; }
+        .home-footer-mid  { font-size: 15px; font-weight: bold; }

@@ -1,0 +1,159 @@
+
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaterSense - Inicio</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo-contenedor">
+            <img src="../imagenes/Watersense.jpeg" alt="Logo WaterSense" class="logo-imagen">
+            <h1 class="logo-texto">WaterSense</h1>
+        </div>
+        <nav class="navegacion home-nav">
+            <a href="index.html">Inicio</a>
+            <a href="guias.html">Guias</a>
+            <a href="home.html">Datos Historicos</a>
+            <a href="reportar.html">Reportar Problema</a>
+            <a href="#">Mapa hídrico</a>
+            <a href="#">Iniciar Sesion</a>
+        </nav>
+    </header>
+
+    <!-- HERO: panel azul + mapa -->
+    <section class="home-hero">
+        <div class="home-hero-panel">
+            <input type="text" class="home-input-zona" placeholder="¿Que zona busca?">
+            <p class="home-label-alerta">Nivel de Alerta</p>
+            <div class="home-botones-alerta">
+                <button class="home-btn-alerta home-btn-bajo">Bajo</button>
+                <button class="home-btn-alerta home-btn-medio">Medio</button>
+                <button class="home-btn-alerta home-btn-alto">Alto</button>
+            </div>
+            <button class="home-btn-buscar">Buscar</button>
+        </div>
+        <div class="home-hero-mapa">
+            <img src="../imagenes/mapa1.jpeg" alt="Mapa hídrico">
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOLUCIONES -->
+    <section class="home-soluciones">
+        <h2 class="home-soluciones-titulo">Soluciones de WaterSense</h2>
+        <p class="home-soluciones-sub">Herramientas digitales para reportar, monitorear y analizar el acceso al agua segura.</p>
+
+        <div class="home-cards-grid">
+
+            <!-- Card 1: Reporte de problemas -->
+            <div class="home-card-wrap">
+                <h3 class="home-card-titulo">Reporte de problemas</h3>
+                <div class="home-card">
+                    <svg class="home-card-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <!-- Documento -->
+                        <rect x="18" y="10" width="52" height="66" rx="5" fill="#dbeeff" stroke="#4da6ff" stroke-width="2"/>
+                        <line x1="28" y1="28" x2="58" y2="28" stroke="#4da6ff" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="28" y1="38" x2="58" y2="38" stroke="#4da6ff" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="28" y1="48" x2="46" y2="48" stroke="#4da6ff" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- Gota de agua abajo izq -->
+                        <path d="M18 78 Q14 70 18 66 Q22 70 18 78Z" fill="#4da6ff"/>
+                        <!-- Signo de exclamación naranja -->
+                        <circle cx="68" cy="72" r="14" fill="#fff3e0" stroke="#f59300" stroke-width="2.5"/>
+                        <line x1="68" y1="66" x2="68" y2="74" stroke="#f59300" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="68" cy="79" r="2" fill="#f59300"/>
+                    </svg>
+                    <p class="home-card-desc">Permite registrar fallas como cortes de agua, baja presión, agua turbia o mal olor.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Mapa hídrico -->
+            <div class="home-card-wrap">
+                <h3 class="home-card-titulo">Mapa hídrico</h3>
+                <div class="home-card">
+                    <svg class="home-card-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <!-- Mano sosteniendo -->
+                        <ellipse cx="50" cy="80" rx="28" ry="10" fill="#c8e6c9" opacity="0.6"/>
+                        <path d="M36 72 Q32 80 38 84 Q50 88 62 84 Q68 80 64 72" fill="#a5d6a7"/>
+                        <!-- Pin de mapa -->
+                        <path d="M50 15 C38 15 30 24 30 34 C30 50 50 68 50 68 C50 68 70 50 70 34 C70 24 62 15 50 15Z" fill="#dbeeff" stroke="#0068a8" stroke-width="2.5"/>
+                        <circle cx="50" cy="34" r="9" fill="#0068a8"/>
+                        <circle cx="50" cy="34" r="4" fill="#ffffff"/>
+                        <!-- Hojita verde izq -->
+                        <path d="M28 58 Q20 50 24 42 Q32 46 28 58Z" fill="#66bb6a"/>
+                        <!-- Hojita verde der -->
+                        <path d="M72 58 Q80 50 76 42 Q68 46 72 58Z" fill="#81c784"/>
+                    </svg>
+                    <p class="home-card-desc">Visualiza zonas críticas según el nivel de gravedad, ubicación y reportes enviados por la comunidad.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Guias -->
+            <div class="home-card-wrap">
+                <h3 class="home-card-titulo">Guias</h3>
+                <div class="home-card">
+                    <svg class="home-card-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <!-- Libro abierto -->
+                        <path d="M50 22 Q36 18 18 22 L18 76 Q36 72 50 76Z" fill="#dbeeff" stroke="#4da6ff" stroke-width="2"/>
+                        <path d="M50 22 Q64 18 82 22 L82 76 Q64 72 50 76Z" fill="#dbeeff" stroke="#4da6ff" stroke-width="2"/>
+                        <line x1="50" y1="22" x2="50" y2="76" stroke="#4da6ff" stroke-width="2"/>
+                        <!-- Líneas de texto izq -->
+                        <line x1="26" y1="36" x2="44" y2="34" stroke="#4da6ff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="26" y1="44" x2="44" y2="42" stroke="#4da6ff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="26" y1="52" x2="44" y2="50" stroke="#4da6ff" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Líneas de texto der -->
+                        <line x1="56" y1="34" x2="74" y2="36" stroke="#4da6ff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="56" y1="42" x2="74" y2="44" stroke="#4da6ff" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Hojita verde abajo der -->
+                        <circle cx="74" cy="70" r="10" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
+                        <path d="M70 72 Q72 64 74 70 Q76 64 78 72" stroke="#66bb6a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <!-- Gota azul abajo izq -->
+                        <path d="M28 78 Q24 70 28 65 Q32 70 28 78Z" fill="#4da6ff"/>
+                    </svg>
+                    <p class="home-card-desc">Recomendaciones sencillas para purificar, almacenar y consumir agua de forma segura.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Datos Historicos -->
+            <div class="home-card-wrap">
+                <h3 class="home-card-titulo">Datos Historicos</h3>
+                <div class="home-card">
+                    <svg class="home-card-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <!-- Barras -->
+                        <rect x="14" y="56" width="14" height="24" rx="2" fill="#4da6ff"/>
+                        <rect x="34" y="40" width="14" height="40" rx="2" fill="#0068a8"/>
+                        <rect x="54" y="26" width="14" height="54" rx="2" fill="#0d5a7a"/>
+                        <!-- Línea base -->
+                        <line x1="10" y1="82" x2="80" y2="82" stroke="#777" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- Gota azul arriba der -->
+                        <path d="M78 22 Q74 13 78 8 Q82 13 78 22Z" fill="#4da6ff"/>
+                        <!-- Reloj pequeño -->
+                        <circle cx="78" cy="36" r="12" fill="#fff8e1" stroke="#f59300" stroke-width="2"/>
+                        <line x1="78" y1="30" x2="78" y2="36" stroke="#f59300" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="78" y1="36" x2="83" y2="36" stroke="#f59300" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <p class="home-card-desc">Organiza reportes y recopila datos historicos para que investigadores y autoridades puedan analizar la situación hídrica.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pie-pagina">
+        <p>©WaterSense 2026. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const botonesAlerta = document.querySelectorAll('.home-btn-alerta');
+        botonesAlerta.forEach(btn => {
+            btn.addEventListener('click', () => {
+                botonesAlerta.forEach(b => b.style.outline = 'none');
+                btn.style.outline = '3px solid rgba(255,255,255,0.6)';
+            });
+        });
+    </script>
+</body>
+</html>

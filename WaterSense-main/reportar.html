@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Problema - WaterSense</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="logo-contenedor">
+            <img src="../imagenes/Watersense.jpeg" alt="Logo WaterSense" class="logo-imagen">
+            <h1 class="logo-texto">WaterSense</h1>
+        </div>
+        
+        <nav class="navegacion">
+            <img src="../imagenes/Notificacion.jpeg" alt="Notificaciones" class="icono-campana-img">
+            <a href="index.html">Inicio</a>
+            <a href="guias.html">Guias</a>
+            <a href="#" class="activo">Reportar Problema</a>
+            <a href="#">Mapa hídrico</a>
+            <a href="#">Iniciar Sesion</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+
+        <!-- Panel izquierdo: formulario -->
+        <section class="panel-izquierdo">
+            <h2 class="titulo-panel">Reporte de Problema</h2>
+            <hr class="linea-separadora">
+
+            <div class="formulario-reporte">
+
+                <div class="campo-formulario">
+                    <label class="label-campo" for="problema">¿Qué problema ocurre?</label>
+                    <input 
+                        type="text" 
+                        id="problema" 
+                        class="input-campo" 
+                        placeholder="Ej: Baja presión de agua"
+                        value="Baja presión de agua"
+                    >
+                </div>
+
+                <div class="campo-formulario">
+                    <label class="label-campo" for="ubicacion">Ubicación</label>
+                    <input 
+                        type="text" 
+                        id="ubicacion" 
+                        class="input-campo" 
+                        placeholder="Ej: Lima, Villa el Salvador, Sector 3"
+                        value="Lima, Villa el Salvador, Sector 3, Grupo 15"
+                    >
+                </div>
+
+                <div class="campo-formulario">
+                    <label class="label-campo" for="descripcion">Descripción</label>
+                    <textarea 
+                        id="descripcion" 
+                        class="textarea-campo" 
+                        placeholder="Describe el problema con más detalle..."
+                        rows="4"
+                    >Presión de agua disminuyó repentinamente desde esta mañana en toda la zona.</textarea>
+                </div>
+
+                <div class="botones-formulario">
+                    <button class="btn-adjuntar" onclick="document.getElementById('input-foto').click()">
+                        📎 Adjuntar Foto
+                    </button>
+                    <input type="file" id="input-foto" accept="image/*" style="display:none" onchange="mostrarNombreArchivo(this)">
+                    <span id="nombre-archivo" class="nombre-archivo"></span>
+                    
+                    <button class="btn-enviar" onclick="enviarReporte()">Enviar</button>
+                </div>
+
+                <!-- Mensaje de éxito (oculto por defecto) -->
+                <div id="mensaje-exito" class="mensaje-exito" style="display:none">
+                    ✅ ¡Reporte enviado exitosamente! Gracias por contribuir a WaterSense.
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Panel derecho: mapa -->
+        <section class="panel-derecho">
+            <img src="../imagenes/Mapa.jpeg" alt="Mapa hídrico" class="imagen-mapa">
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>©WaterSense 2026. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../javascript/app.js"></script>
+    <script>
+        function mostrarNombreArchivo(input) {
+            const nombre = input.files[0] ? input.files[0].name : '';
+            document.getElementById('nombre-archivo').textContent = nombre;
+        }
+
+        function enviarReporte() {
+            const problema = document.getElementById('problema').value.trim();
+            const ubicacion = document.getElementById('ubicacion').value.trim();
+            const descripcion = document.getElementById('descripcion').value.trim();
+
+            if (!problema || !ubicacion || !descripcion) {
+                alert('Por favor completa todos los campos antes de enviar.');
+                return;
+            }
+
+            const mensaje = document.getElementById('mensaje-exito');
+            mensaje.style.display = 'block';
+
+            // Limpiar formulario
+            document.getElementById('problema').value = '';
+            document.getElementById('ubicacion').value = '';
+            document.getElementById('descripcion').value = '';
+            document.getElementById('nombre-archivo').textContent = '';
+
+            setTimeout(() => { mensaje.style.display = 'none'; }, 4000);
+        }
+    </script>
+</body>
+</html>
